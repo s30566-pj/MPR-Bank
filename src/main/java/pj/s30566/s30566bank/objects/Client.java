@@ -1,12 +1,7 @@
 package pj.s30566.s30566bank.objects;
 
-
-
-import org.springframework.stereotype.Component;
-
 import java.time.LocalDateTime;
 
-@Component
 public class Client {
 
     private String name;

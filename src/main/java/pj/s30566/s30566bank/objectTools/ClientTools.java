@@ -1,6 +1,5 @@
 package pj.s30566.s30566bank.objectTools;
 
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 import pj.s30566.s30566bank.objects.Client;
 
@@ -16,7 +15,6 @@ public class ClientTools {
         }
         LocalDateTime now = LocalDateTime.now();
         Period period = Period.between(client.getBirthday().toLocalDate(), now.toLocalDate());
-        int age = period.getYears();
-        return age;
+        return period.getYears();
     }
 }
