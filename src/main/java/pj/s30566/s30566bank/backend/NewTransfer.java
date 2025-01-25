@@ -24,7 +24,7 @@ public class NewTransfer {
     private double calcNewBalance(Client client, double amount) {
         return client.getWallet() - amount;
     }
-
+    // metoda weryfikuje czy przelew jest poprawny
     public TransactionStatus sendNewTransfer(Transfer transfer, Client client, int destination) {
         double amount = transfer.getAmount();
         if ( isEnoughMoney(client, amount) == 1) {
@@ -40,8 +40,9 @@ public class NewTransfer {
         } catch (Exception e) {
             return new TransactionStatus(amount, "Unknown error", calcNewBalance(client, amount));
         }
+        client.setWallet(calcNewBalance(client, amount));
 
-        return new TransactionStatus(amount, "New transfer", calcNewBalance(client, amount));
+        return new TransactionStatus(amount, "Transfer Succeded", calcNewBalance(client, amount));
     }
 
     private Transfer createNewTransfer(Client client, double amount, int destination) {
