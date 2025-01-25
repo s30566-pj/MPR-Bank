@@ -17,4 +17,8 @@ public class ClientTools {
         Period period = Period.between(client.getBirthday().toLocalDate(), now.toLocalDate());
         return period.getYears();
     }
+
+    public String getClientData(Client client) {
+        return client.toString();
+    }
 }
