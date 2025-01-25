@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ClientUnitTest {
 
-    Client client = new Client("Adam", "Kowalski", "kowalski@wp.pl", "123456789", "test", LocalDateTime.of(2003, 2, 1, 0, 0), 200.97);
+    Client client = new Client(123,"Adam", "Kowalski", "kowalski@wp.pl", "123456789", "test", LocalDateTime.of(2003, 2, 1, 0, 0), 200.97);
 
     ClientTools clientTools = new ClientTools();
 
