@@ -1,4 +1,4 @@
-package pj.s30566.s30566bank.backend;
+package pj.s30566.s30566bank.objects;
 
 public class ChargeAccount {
     private int id;
